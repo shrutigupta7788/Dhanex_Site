@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dhanex</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div
+      class="container-fluid bg-dark text-white-50 py-2 px-0 d-none d-lg-block"
+    >
+      <div class="row gx-0 align-items-center">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt me-2"></small>
+            <small>+91 912 345 6789</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="far fa-envelope-open me-2"></small>
+            <small>support@dhane.com</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="far fa-clock me-2"></small>
+            <small>Mon - Fri : 09:00 AM - 09:00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center">
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5"
+    >
+      <a href="loan_against_property.html" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0">
+          <img
+            class="img-fluid me-3"
+            src="img/logo-removebg-preview.png"
+            alt=""
+          />
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="about.html" class="nav-item nav-link">About Us</a>
+          <a href="service.html" class="nav-item nav-link">Our Services</a>
+          <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="appointment.html" class="dropdown-item">Appointment</a>
+                        <a href="team.html" class="dropdown-item">Team Members</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div> -->
+          <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+        </div>
+      </div>
+      <a
+        href="#"
+        class="btn btn-primary px-3"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#emiOffcanvas"
+        aria-controls="emiOffcanvas"
+        >EMI Calculator</a
+      >
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- EMI Calculator Offcanvas Start -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="emiOffcanvas"
+      aria-labelledby="emiOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="emiOffcanvasLabel">EMI Calculator</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="container-fluid">
+          <div class="mb-3">
+            <ul
+              class="nav nav-tabs emi-tabs flex-nowrap"
+              id="emiTypeTabs"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  type="button"
+                  data-loan-type="home"
+                >
+                  <i class="bi bi-house-door me-2"></i>Home
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  type="button"
+                  data-loan-type="personal"
+                >
+                  <i class="bi bi-person-circle me-2"></i>Personal
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  type="button"
+                  data-loan-type="business"
+                >
+                  <i class="bi bi-shop me-2"></i>Business
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Loan Amount</label>
+            <div class="d-flex align-items-center mb-2 emi-control">
+              <div class="flex-grow-1">
+                <input
+                  type="range"
+                  class="form-range"
+                  id="emiAmountRange"
+                  min="10000"
+                  max="10000000"
+                  step="1000"
+                  value="100000"
+                />
+              </div>
+              <input
+                type="text"
+                class="form-control ms-3"
+                id="emiAmountInput"
+                value="₹1,00,000"
+                style="max-width: 180px"
+              />
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-semibold"
+              >Interest Rate <small class="text-muted">(Annual %)</small></label
+            >
+            <div class="d-flex align-items-center mb-2 emi-control">
+              <div class="flex-grow-1">
+                <input
+                  type="range"
+                  class="form-range"
+                  id="emiRateRange"
+                  min="1"
+                  max="36"
+                  step="0.1"
+                  value="7"
+                />
+              </div>
+              <input
+                type="text"
+                class="form-control ms-3"
+                id="emiRateInput"
+                value="7%"
+                style="max-width: 120px"
+              />
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Loan Tenure</label>
+            <div class="row g-2 align-items-center">
+              <div class="col-12 col-sm-5">
+                <input
+                  type="range"
+                  class="form-range"
+                  id="emiTenureRange"
+                  min="1"
+                  max="360"
+                  step="1"
+                  value="60"
+                />
+              </div>
+              <div class="col-12 col-sm-5">
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="emiTenureInput"
+                    value="60"
+                  />
+                  <span class="input-group-text" id="emiTenureUnit"
+                    >Months</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="mt-2">
+              <div class="btn-group" role="group" aria-label="Tenure Type">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emiTenureType"
+                  id="emiTenureMonths"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="emiTenureMonths"
+                  >Months</label
+                >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="emiTenureType"
+                  id="emiTenureYears"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="emiTenureYears"
+                  >Years</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="border rounded-3 p-3 bg-light">
+            <div class="d-flex justify-content-between mb-2">
+              <span
+                ><span class="badge bg-primary me-2">&nbsp;</span>Monthly
+                EMI</span
+              >
+              <span id="monthlyEmiValue">₹0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span
+                ><span class="badge bg-danger me-2">&nbsp;</span>Principal
+                Amount</span
+              >
+              <span id="principalValue">₹0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span
+                ><span class="badge bg-info me-2">&nbsp;</span>Interest
+                Payable</span
+              >
+              <span id="interestValue">₹0</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between">
+              <strong>Total Amount payable</strong>
+              <strong id="totalPayableValue">₹0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <button class="btn btn-primary" id="calculateEmiBtn" type="button">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- EMI Calculator Offcanvas End -->
+
+     <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+      <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="w-100" src="img/carousel-1.jpg" alt="Image" />
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <h1 class="display-3 text-dark mb-4 animated slideInDown">
+                      Smart Financial Solutions for a Secure Tomorrow
+                    </h1>
+                    <p class="fs-5 text-body mb-5">
+                      From savings and investments to loans and advisory, we
+                      help you grow, protect, and manage your wealth—every step
+                      of the way
+                    </p>
+                    <a href="" class="btn btn-primary py-3 px-5"
+                      >More Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="w-100" src="img/carousel-2.jpg" alt="Image" />
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <h1 class="display-3 text-dark mb-4 animated slideInDown">
+                      The Best Insurance Begins Here
+                    </h1>
+                    <p class="fs-5 text-body mb-5">
+                      Clita erat ipsum et lorem et sit, sed stet lorem sit clita
+                      duo justo magna dolore erat amet
+                    </p>
+                    <a href="" class="btn btn-primary py-3 px-5"
+                      >More Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#header-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#header-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+    
+
+  
+
+
+ 
+
+   
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto" style="max-width: 500px">
+          <h1 class="display-6 mb-5">Meet Our Professional Team Members</h1>
+        </div>
+        
+      </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto" style="max-width: 500px">
+          <h1 class="display-6 mb-5">What They Say About Our Insurance</h1>
+        </div>
+        
+      </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-2 col-md-1">
+                    <h1 class="text-white mb-4"><img class="img-fluid me-3" src="img/logo-removebg-preview.png" alt="" /></h1>
+                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>support@dhanexfinance.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">Dhanex</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a href="https://aaizoneitacademy.com/">Aaizone IT Academy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
